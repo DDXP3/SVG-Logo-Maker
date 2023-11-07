@@ -24,7 +24,7 @@ function genLog(data) {
 
   <${renSha(data.sha)} fill="${renShaCol(data.shaCol)}"/>
 
-  <text x="150" y="120" font-size="60" text-anchor="middle" fill="${renTexCol(data.texCol)}">${data.tex}</text>
+  <text x="150" y="125" font-size="60" text-anchor="middle" fill="${renTexCol(data.texCol)}">${data.tex}</text>
 
 </svg>
     `
