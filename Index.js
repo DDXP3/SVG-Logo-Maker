@@ -1,7 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-const genLog = require('./utils/genLogSVG.js')
+const genLog = require('./utils/genLogSVG.js');
+
+const Shape = require('./obj.js')
 
 // const texVal = async (input) => {
 //     if (input.length < 0 || input.length > 3) {
@@ -49,6 +51,9 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(que).then(responses => {
         console.log(responses);
+
+        const newShape = new Shape(responses.text, responses.textColor, responses.shape, responses.shapeColor);
+
         writeToFile('logo.svg', genLog(responses));
     })
 }
