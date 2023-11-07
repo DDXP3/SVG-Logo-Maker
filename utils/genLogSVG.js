@@ -4,13 +4,13 @@ function renShaCol(shapeCol){
 
 function renSha(shape){
     if (shape === "Circle"){
-        return `<circle cx="150" cy="100" r="80" fill=""/>`
+        return `<circle cx="150" cy="100" r="80" fill="blue"/>`
     }
     else if (shape === "Triangle"){
-        return `<triangle id="sha">`
+        return `<polygon points="150, 18 244, 182 56, 182" fill="blue" />`
     }
     else if (shape === "Square"){
-        return `<square id="sha">`
+        return `<square/>`
     }
 }
 

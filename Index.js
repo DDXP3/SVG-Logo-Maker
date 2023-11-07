@@ -49,7 +49,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(que).then(responses => {
         console.log(responses);
-        writeToFile('logo.svg', genLog(responses));
+        writeToFile('logo.svg', genLog(responses), renSha(responses));
     })
 }
 
