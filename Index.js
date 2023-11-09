@@ -51,7 +51,7 @@ function CreSha(res){
             `${res.sha}`,
             `${res.shaCol}`,
         );
-        console.log(newCircle);
+        // console.log(newCircle);
         return newCircle
     }
     else if (res.sha == "Triangle"){
@@ -61,7 +61,7 @@ function CreSha(res){
             `${res.sha}`,
             `${res.shaCol}`
         );
-        console.log(newTriangle);
+        // console.log(newTriangle);
         return newTriangle
     }
     else if (res.sha == "Square"){
@@ -71,7 +71,7 @@ function CreSha(res){
             `${res.sha}`,
             `${res.shaCol}`
         );
-        console.log(newSquare);
+        // console.log(newSquare);
         return newSquare
     }
 }
@@ -83,7 +83,7 @@ function writeToFile(fileName, data) {
 
 function init() {
     inquirer.prompt(que).then(responses => {
-        console.log(responses);
+        // console.log(responses);
 
         const newShape = new CreSha(responses);
 
