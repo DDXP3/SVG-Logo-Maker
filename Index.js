@@ -3,7 +3,7 @@ const fs = require("fs");
 
 const genLog = require('./utils/genLogSVG.js');
 
-const Shape = require('./obj.js')
+const {Shape, Circle, Square, Triangle} = require('./obj.js')
 
 // const texVal = async (input) => {
 //     if (input.length < 0 || input.length > 3) {
@@ -43,6 +43,39 @@ const que = [
     },
 ];
 
+function CreSha(res){
+    if (res.sha == "Circle"){
+        const newCircle = new Circle(
+            `${res.tex}`,
+            `${res.texCol}`,
+            `${res.sha}`,
+            `${res.shaCol}`,
+        );
+        console.log(newCircle);
+        return newCircle
+    }
+    else if (res.sha == "Triangle"){
+        const newTriangle = new Triangle(
+            `${res.tex}`,
+            `${res.texCol}`,
+            `${res.sha}`,
+            `${res.shaCol}`
+        );
+        console.log(newTriangle);
+        return newTriangle
+    }
+    else if (res.sha == "Square"){
+        const newSquare = new Square(
+            `${res.tex}`,
+            `${res.texCol}`,
+            `${res.sha}`,
+            `${res.shaCol}`
+        );
+        console.log(newSquare);
+        return newSquare
+    }
+}
+
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => 
     err ? console.error(err) : console.log("Success"));
@@ -52,9 +85,9 @@ function init() {
     inquirer.prompt(que).then(responses => {
         console.log(responses);
 
-        const newShape = new Shape(responses.text, responses.textColor, responses.shape, responses.shapeColor);
+        const newShape = new CreSha(responses);
 
-        writeToFile('logo.svg', genLog(responses));
+        writeToFile('logo.svg', genLog(newShape));
     })
 }
 

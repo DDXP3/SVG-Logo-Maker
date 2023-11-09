@@ -9,8 +9,8 @@ class Shape {
 }
 
 class Circle extends Shape {
-    constructor(text, textColor, shapeColor){
-        super(text, textColor, shapeColor);
+    constructor(text, textColor, shape, shapeColor){
+        super(text, textColor, shape, shapeColor);
         this.cx = "150",
         this.cy = "100",
         this.r ="80"
@@ -24,8 +24,8 @@ class Circle extends Shape {
 }
 
 class Triangle extends Shape {
-    constructor(text, textColor, shapeColor){
-        super(text, textColor, shapeColor);
+    constructor(text, textColor, shape, shapeColor){
+        super(text, textColor, shape, shapeColor);
         this.points = "150, 18 244, 182 56, 182"
     }
     setShaCol(color){
@@ -37,8 +37,8 @@ class Triangle extends Shape {
 }
 
 class Square extends Shape {
-    constructor(text, textColor, shapeColor){
-        super(text, textColor, shapeColor);
+    constructor(text, textColor, shape, shapeColor){
+        super(text, textColor, shape, shapeColor);
         this.x="75",
         this.y="25",
         this.width="150",
@@ -52,4 +52,4 @@ class Square extends Shape {
     }
 }
 
-module.exports = Shape
+module.exports = {Shape, Circle, Triangle, Square}
