@@ -33,6 +33,15 @@
         The Video below will show how to use the generator:
         https://watch.screencastify.com/v/vjlsRISzXhsw7bZZF78I 
 
+## Credits
+
+        Joey Thao - https://github.com/Thaodev23
+
+        Jason Yang - https://github.com/Jasony95
+
+        On this project I worked with Joey and Jason like usual. Jason with give me a section of the code as a refrence, but I would have to figure out how it works on my own. This lead to me self teaching the code to myself. Again it was just a small section everytime I get to the next part, everything else, I would have to figure it out myself and write it myself. He helped me at min. while helping Joey more, so we could use our time to finish each of our projects faster.
+
+        As always, I am greatful for the help of Jason, instead of giving me his code, he gave me segments of it which allowed me to learn the code myself. 
 
 ## Features
 
